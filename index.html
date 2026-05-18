@@ -24,12 +24,31 @@
       <p class="subtitle">NOVA analiza ingresos, gastos, deudas y metas para generar un plan semanal accionable: ahorro, pago de deuda e inversión con reglas claras.</p>
       <div class="hero-actions">
         <a href="#planner" class="btn">Generar mi plan</a>
-        <a href="#how" class="btn ghost">Ver cómo funciona</a>
+        <a href="#scrub" class="btn ghost">Ver scrubbing</a>
       </div>
       <div class="hero-kpis">
         <article><h3>FAA-4</h3><p>Seguimiento semanal</p></article>
         <article><h3>Con/Sin deuda</h3><p>Rutas personalizadas</p></article>
         <article><h3>Acciones concretas</h3><p>Qué hacer esta semana</p></article>
+      </div>
+    </section>
+
+    <section id="scrub" class="scrub-section">
+      <div class="scrub-sticky panel">
+        <div class="scrub-copy">
+          <p class="eyebrow">Experiencia de scrubbing</p>
+          <h2 id="scrub-title">Caos financiero</h2>
+          <p id="scrub-text" class="subtitle">Tus gastos y metas compiten sin orden. El dinero se fuga.</p>
+        </div>
+        <div class="scrub-stage">
+          <div id="orbit" class="orbit">
+            <span class="node debt">Deuda</span>
+            <span class="node spend">Gastos</span>
+            <span class="node save">Ahorro</span>
+            <span class="node invest">Inversión</span>
+          </div>
+          <div id="progress-line" class="progress-line"><i></i></div>
+        </div>
       </div>
     </section>
 
@@ -48,54 +67,20 @@
 
       <div class="planner-grid">
         <form id="plan-form" class="panel">
-          <div class="field">
-            <label>Ingreso mensual neto (USD)</label>
-            <input type="number" name="income" min="0" required value="2500" />
-          </div>
-          <div class="field">
-            <label>Gastos esenciales mensuales (USD)</label>
-            <input type="number" name="essentials" min="0" required value="1500" />
-          </div>
-          <div class="field inline">
-            <label>¿Tienes deudas activas?</label>
-            <div>
-              <label><input type="radio" name="hasDebt" value="yes" checked /> Sí</label>
-              <label><input type="radio" name="hasDebt" value="no" /> No</label>
-            </div>
-          </div>
-
-          <div id="debt-fields">
-            <div class="field">
-              <label>Pago mínimo total deuda (USD)</label>
-              <input type="number" name="debtMin" min="0" value="220" />
-            </div>
-          </div>
-
-          <div class="field">
-            <label>Fondo de emergencia actual (USD)</label>
-            <input type="number" name="emergencyBalance" min="0" value="300" />
-          </div>
-          <div class="field">
-            <label>Meta fondo de emergencia en meses</label>
-            <select name="emergencyMonths">
-              <option value="3">3 meses (ingreso estable)</option>
-              <option value="6">6 meses (ingreso variable)</option>
-            </select>
-          </div>
-          <div class="field">
-            <label>Perfil de riesgo</label>
-            <select name="risk">
-              <option value="conservative">Conservador</option>
-              <option value="balanced" selected>Balanceado</option>
-              <option value="growth">Crecimiento</option>
-            </select>
-          </div>
+          <div class="field"><label>Ingreso mensual neto (USD)</label><input type="number" name="income" min="0" required value="2500" /></div>
+          <div class="field"><label>Gastos esenciales mensuales (USD)</label><input type="number" name="essentials" min="0" required value="1500" /></div>
+          <div class="field inline"><label>¿Tienes deudas activas?</label><div><label><input type="radio" name="hasDebt" value="yes" checked /> Sí</label><label><input type="radio" name="hasDebt" value="no" /> No</label></div></div>
+          <div id="debt-fields"><div class="field"><label>Pago mínimo total deuda (USD)</label><input type="number" name="debtMin" min="0" value="220" /></div></div>
+          <div class="field"><label>Fondo de emergencia actual (USD)</label><input type="number" name="emergencyBalance" min="0" value="300" /></div>
+          <div class="field"><label>Meta fondo de emergencia en meses</label><select name="emergencyMonths"><option value="3">3 meses (ingreso estable)</option><option value="6">6 meses (ingreso variable)</option></select></div>
+          <div class="field"><label>Perfil de riesgo</label><select name="risk"><option value="conservative">Conservador</option><option value="balanced" selected>Balanceado</option><option value="growth">Crecimiento</option></select></div>
           <button class="btn" type="submit">Calcular plan</button>
         </form>
 
         <section id="results" class="panel results">
           <h3>Tu plan aparecerá aquí</h3>
-          <p>Completa el formulario para ver distribución mensual y acciones semanales.</p>
+          <p>Completa el formulario para ver distribución mensual, gráfico y acciones semanales.</p>
+          <canvas id="allocationChart" width="620" height="280" aria-label="Gráfico de asignación" role="img"></canvas>
         </section>
       </div>
     </section>
