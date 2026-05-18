@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVA Finance OS — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="bg-grid"></div>
+<header class="topbar"><div class="brand">NOVA <span>Finance OS</span></div><nav class="topnav"><a href="index.html">Inicio</a><a href="onboarding.html">Onboarding</a><a href="dashboard.html" class="btn ghost">Dashboard</a></nav></header>
+<main class="section">
+  <h1 class="page-title">Dashboard principal</h1>
+  <p class="subtitle">KPIs, gráficos, datos ingresados y metas del usuario.</p>
+
+  <section class="kpi-grid">
+    <article class="panel"><h3>Dinero disponible</h3><p id="kpi-surplus">—</p></article>
+    <article class="panel"><h3>Deuda extra sugerida</h3><p id="kpi-debt">—</p></article>
+    <article class="panel"><h3>Ahorro emergencia</h3><p id="kpi-emergency">—</p></article>
+    <article class="panel"><h3>Inversión mensual</h3><p id="kpi-invest">—</p></article>
+  </section>
+
+  <section class="planner-grid">
+    <article class="panel">
+      <h3>Gráfico de distribución</h3>
+      <canvas id="allocationChart" width="620" height="280"></canvas>
+    </article>
+    <article class="panel">
+      <h3>Datos del usuario</h3>
+      <div id="user-data" class="data-list"></div>
+      <h3>Meta/Objetivo</h3>
+      <div id="goal-data" class="data-list"></div>
+    </article>
+  </section>
+
+  <section class="panel">
+    <h3>Acciones semanales</h3>
+    <ol id="weekly-actions"></ol>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

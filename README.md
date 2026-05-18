@@ -1,20 +1,17 @@
 # Scrubbing
 
-Prototipo web de **NOVA Finance OS**, una plataforma fintech enfocada en automatización financiera personal.
+Prototipo web de **NOVA Finance OS** con estructura multipágina.
+
+## Páginas
+
+- `index.html`: Landing principal con propuesta de valor.
+- `onboarding.html`: Captura de datos financieros y metas del usuario.
+- `dashboard.html`: Vista de KPIs, gráfico de asignación, datos ingresados y acciones semanales.
 
 ## Ejecutar localmente
-
-Como es un prototipo estático, abre `index.html` en tu navegador o usa un servidor local:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Luego visita: `http://localhost:8080`
-
-## Incluye
-
-- Landing premium con narrativa fintech.
-- Simulador financiero con ruta condicional **con deuda / sin deuda**.
-- Motor de asignación automática (MVP) con reglas determinísticas.
-- Acciones semanales sugeridas con montos concretos.
+Luego visita `http://localhost:8080`.
