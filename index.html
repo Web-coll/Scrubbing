@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVA Finance OS — Inicio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="bg-grid"></div>
+<header class="topbar">
+  <div class="brand">NOVA <span>Finance OS</span></div>
+  <nav class="topnav">
+    <a href="index.html">Inicio</a><a href="onboarding.html">Onboarding</a><a href="dashboard.html">Dashboard</a>
+    <a href="deudas.html">Deudas</a><a href="ahorro.html">Ahorro</a><a href="inversion.html">Inversión</a>
+  </nav>
+  <div class="currency-switcher"><label for="currency">Divisa</label><select id="currency"><option>USD</option><option>EUR</option><option>MXN</option><option>COP</option></select></div>
+</header>
+<main class="section">
+  <section class="hero reveal">
+    <p class="eyebrow">Finanzas personales automáticas</p>
+    <h1>Sistema operativo financiero personal</h1>
+    <p class="subtitle">Ahora el sitio está separado en páginas especializadas para deuda, ahorro e inversión, además de onboarding y dashboard.</p>
+    <div class="hero-actions"><a class="btn" href="onboarding.html">Comenzar onboarding</a><a class="btn ghost" href="dashboard.html">Ver dashboard</a></div>
+  </section>
+  <section class="cards reveal">
+    <article class="card"><h3>Deudas</h3><p>Estrategia de salida y progreso.</p></article>
+    <article class="card"><h3>Ahorro</h3><p>Fondo de emergencia y metas.</p></article>
+    <article class="card"><h3>Inversión</h3><p>Asignación sugerida y crecimiento.</p></article>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
