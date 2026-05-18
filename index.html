@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVA Finance OS</title>
+  <meta name="description" content="Sistema operativo financiero personal: automatiza decisiones, acelera salida de deudas y crecimiento patrimonial." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <header class="topbar">
+    <div class="brand">NOVA <span>Finance OS</span></div>
+    <a href="#planner" class="btn ghost">Probar plan</a>
+  </header>
+
+  <main>
+    <section class="hero section reveal">
+      <p class="eyebrow">Sistema Operativo Financiero Personal</p>
+      <h1>Tu dinero en <span>piloto inteligente</span>, sin caos ni culpa.</h1>
+      <p class="subtitle">NOVA analiza ingresos, gastos, deudas y metas para generar un plan semanal accionable: ahorro, pago de deuda e inversión con reglas claras.</p>
+      <div class="hero-actions">
+        <a href="#planner" class="btn">Generar mi plan</a>
+        <a href="#how" class="btn ghost">Ver cómo funciona</a>
+      </div>
+      <div class="hero-kpis">
+        <article><h3>FAA-4</h3><p>Seguimiento semanal</p></article>
+        <article><h3>Con/Sin deuda</h3><p>Rutas personalizadas</p></article>
+        <article><h3>Acciones concretas</h3><p>Qué hacer esta semana</p></article>
+      </div>
+    </section>
+
+    <section id="how" class="section reveal">
+      <h2>Cómo funciona</h2>
+      <div class="cards">
+        <article class="card"><h3>1. Diagnóstico</h3><p>Ingresas tu realidad financiera en minutos: ingresos, gastos, deudas (si tienes), metas y perfil de riesgo.</p></article>
+        <article class="card"><h3>2. Motor inteligente</h3><p>El Policy Engine distribuye automáticamente tu excedente entre seguridad, deuda, ahorro e inversión según tu etapa.</p></article>
+        <article class="card"><h3>3. Acción semanal</h3><p>Recibes tareas exactas con montos claros para avanzar sin fricción.</p></article>
+      </div>
+    </section>
+
+    <section id="planner" class="section reveal">
+      <h2>Simulador de Plan Semanal (MVP)</h2>
+      <p class="subtitle">Completa tus datos y NOVA genera una distribución automática con enfoque con/sin deuda.</p>
+
+      <div class="planner-grid">
+        <form id="plan-form" class="panel">
+          <div class="field">
+            <label>Ingreso mensual neto (USD)</label>
+            <input type="number" name="income" min="0" required value="2500" />
+          </div>
+          <div class="field">
+            <label>Gastos esenciales mensuales (USD)</label>
+            <input type="number" name="essentials" min="0" required value="1500" />
+          </div>
+          <div class="field inline">
+            <label>¿Tienes deudas activas?</label>
+            <div>
+              <label><input type="radio" name="hasDebt" value="yes" checked /> Sí</label>
+              <label><input type="radio" name="hasDebt" value="no" /> No</label>
+            </div>
+          </div>
+
+          <div id="debt-fields">
+            <div class="field">
+              <label>Pago mínimo total deuda (USD)</label>
+              <input type="number" name="debtMin" min="0" value="220" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Fondo de emergencia actual (USD)</label>
+            <input type="number" name="emergencyBalance" min="0" value="300" />
+          </div>
+          <div class="field">
+            <label>Meta fondo de emergencia en meses</label>
+            <select name="emergencyMonths">
+              <option value="3">3 meses (ingreso estable)</option>
+              <option value="6">6 meses (ingreso variable)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Perfil de riesgo</label>
+            <select name="risk">
+              <option value="conservative">Conservador</option>
+              <option value="balanced" selected>Balanceado</option>
+              <option value="growth">Crecimiento</option>
+            </select>
+          </div>
+          <button class="btn" type="submit">Calcular plan</button>
+        </form>
+
+        <section id="results" class="panel results">
+          <h3>Tu plan aparecerá aquí</h3>
+          <p>Completa el formulario para ver distribución mensual y acciones semanales.</p>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="section footer">
+    <p>⚠️ NOVA es una plataforma educativa y de guía financiera. No constituye asesoría de inversión personalizada.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
